@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "API.Protos";
+import "base.proto";
+
+package calculadora;
+
+service Calculadora {
+  rpc Sumar (base.Request) returns (base.Response);
+  rpc Restar (base.Request) returns (base.Response);
+  rpc Multiplicar (base.Request) returns (base.Response);
+  rpc Dividir (base.Request) returns (base.Response);
+}
